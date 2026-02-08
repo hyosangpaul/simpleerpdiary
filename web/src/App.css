@@ -1,0 +1,350 @@
+.app {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.menu {
+  display: flex;
+  background-color: #34495e;
+  padding: 0;
+  margin: 0;
+  border-bottom: 3px solid #e74c3c;
+}
+
+.menu-item {
+  flex: 1;
+  padding: 15px 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.menu-item:hover {
+  background-color: #2c3e50;
+}
+
+.menu-item.active {
+  background-color: #e74c3c;
+  border-bottom-color: #e74c3c;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background-color: white;
+  min-height: calc(100vh - 150px);
+}
+
+main h2 {
+  color: #2c3e50;
+  margin-top: 0;
+}
+
+/* Calendar Styles */
+.calendar-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.calendar-header h2 {
+  flex: 1;
+  text-align: center;
+  color: #2c3e50;
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav-btn {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #2c3e50;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.calendar-table thead th {
+  background-color: #34495e;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.calendar-table tbody td {
+  border: 1px solid #ecf0f1;
+  padding: 12px;
+  text-align: right;
+  height: 70px;
+  vertical-align: top;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+  color: #000;
+}
+
+.calendar-day.other-month {
+  color: #bdc3c7;
+  background-color: #f8f9fa;
+}
+
+.calendar-day.today {
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.calendar-table tbody tr:hover td:not(.today) {
+  background-color: #ecf0f1;
+}
+
+/* Product Register Styles */
+.product-register {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 20px;
+}
+
+.product-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 24px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-add {
+  background-color: #27ae60;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #229954;
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+.btn-delete:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.btn-save {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #2980b9;
+}
+
+.btn-cancel {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #7f8c8d;
+}
+
+/* Product Form */
+.product-form {
+  background-color: #f8f9fa;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.product-form h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ecf0f1;
+  border-radius: 4px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-buttons .btn {
+  flex: 1;
+  padding: 12px;
+}
+
+/* Product Table */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.product-table thead {
+  background-color: #34495e;
+  color: white;
+}
+
+.product-table th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border: 1px solid #ecf0f1;
+}
+
+.product-table th.checkbox-col {
+  text-align: center;
+}
+
+.product-table td {
+  padding: 12px;
+  border: 1px solid #ecf0f1;
+  color: #000;
+}
+
+.product-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.product-table tbody tr:hover {
+  background-color: #ecf0f1;
+}
+
+.product-table tbody tr.selected {
+  background-color: #e8f4f8;
+}
+
+.checkbox-col {
+  width: 50px;
+  text-align: center;
+}
+
+.checkbox-col input[type="checkbox"] {
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+}
+
+.product-name {
+  color: #3498db;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.product-name:hover {
+  text-decoration: underline;
+  color: #2980b9;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #7f8c8d;
+  font-size: 16px;
+}

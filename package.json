@@ -1,0 +1,11 @@
+{
+  "name": "Simple-ERP-Diary",
+  "version": "0.1.0",
+  "description": "Cross-platform hybrid web app built with React and TypeScript",
+  "private": true,
+  "scripts": {
+    "dev": "cd web && npm run dev",
+    "build": "cd web && npm run build",
+    "preview": "cd web && npm run preview"
+  }
+}
