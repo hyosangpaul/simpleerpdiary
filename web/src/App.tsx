@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
-import Calendar from './Calendar'
-import ProductRegister from './ProductRegister'
-import './App.css'
+import React, { useState } from "react";
+import Calendar from "./Calendar";
+import ProductRegister from "./ProductRegister";
+import InventoryRegister from "./InventoryRegister";
+import "./App.css";
 
 function App() {
-  const [activeMenu, setActiveMenu] = useState('home')
+  const [activeMenu, setActiveMenu] = useState("home");
 
   return (
     <div className="app">
@@ -12,32 +13,32 @@ function App() {
         <h1>Simple ERP Diary</h1>
       </header>
       <nav className="menu">
-        <button 
-          className={`menu-item ${activeMenu === 'home' ? 'active' : ''}`}
-          onClick={() => setActiveMenu('home')}
+        <button
+          className={`menu-item ${activeMenu === "home" ? "active" : ""}`}
+          onClick={() => setActiveMenu("home")}
         >
           홈
         </button>
-        <button 
-          className={`menu-item ${activeMenu === 'product' ? 'active' : ''}`}
-          onClick={() => setActiveMenu('product')}
+        <button
+          className={`menu-item ${activeMenu === "product" ? "active" : ""}`}
+          onClick={() => setActiveMenu("product")}
         >
-          상품등록
+          상품
         </button>
-        <button 
-          className={`menu-item ${activeMenu === 'inventory' ? 'active' : ''}`}
-          onClick={() => setActiveMenu('inventory')}
+        <button
+          className={`menu-item ${activeMenu === "inventory" ? "active" : ""}`}
+          onClick={() => setActiveMenu("inventory")}
         >
-          재고등록
+          재고
         </button>
       </nav>
       <main>
-        {activeMenu === 'home' && <Calendar />}
-        {activeMenu === 'product' && <ProductRegister />}
-        {activeMenu === 'inventory' && <div><h2>재고등록</h2><p>상품의 재고를 등록하세요.</p></div>}
+        {activeMenu === "home" && <Calendar />}
+        {activeMenu === "product" && <ProductRegister />}
+        {activeMenu === "inventory" && <InventoryRegister />}
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
